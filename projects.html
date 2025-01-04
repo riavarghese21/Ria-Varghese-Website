@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Ria Varghese</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Navbar-->
+<div class="navbar">
+    <div class="logo">Ria Varghese</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</div>
+
+<!--Header-->
+<header class="main-header">
+    <h1>PROJECTS</h1>
+    <p>View Some of the Project That I Have Worked On!</p>
+</header>
+
+<!--Projects-->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <i class="fa-solid fa-hotel"></i>
+            <h3>Hotel Management System</h3>
+            <p>A management tool for hotel operations.</p>
+            <p><strong>Technologies:</strong> Java, MySQL, HTML, CSS</p>
+            <a href="#" class="btn">View Project</a>
+        </div>        
+      <div class="project-card">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Sushi Restaurant</h3>
+        <p>An application for restaurant orders and reservations.</p>
+        <p><strong>Technologies:</strong> Java, MySQL, JFrame</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-clipboard-user"></i>
+        <h3>Student Attendance Tracker</h3>
+        <p>A web-based application to track student attendance.</p>
+        <p><strong>Technologies:</strong> Java, MySQL, HTML, CSS</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-shirt"></i>
+        <h3>Online Store</h3>
+        <p>An online clothing store application.</p>
+        <p><strong>Technologies:</strong> Java, MySQL, JFrame</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+  
+
+<!--Footer-->
+<footer>
+    <p>&copy; 2025 Ria Varghese. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPage = window.location.pathname;
+  
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Back to Top Button -->
+<button id="back-to-top" title="Back to Top">&#8679;</button>
+
+<script>
+    // Get the button
+    const backToTopButton = document.getElementById("back-to-top");
+  
+    // Show the button when scrolling down
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+  
+    // Scroll back to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ria Varghese</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--Navbar-->
+<div class="navbar">
+    <div class="logo">Ria Varghese</div>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>      
+</div>
+
+<!--Header-->
+<header class="main-header">
+    <h1>RIA VARGHESE</h1>
+    <p>Master’s in Computer Science | New York Institute of Technology</p>
+</header>
+
+<!--About Section-->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Computer Science Graduate Student with a 3.82 GPA, passionate about developing innovative solutions and learning cutting-edge technologies.</p>
+    </div>
+</section>
+
+<!--Work Experience-->
+<section id="work-experience" class="alt-section">
+    <div class="container">
+        <h2>Work Experience</h2>
+        <div class="card-container">
+            
+            <!-- Teaching Assistant -->
+            <div class="card">
+                <i class="fa-solid fa-chalkboard-user"></i>               
+                <h3>Teaching Assistant</h3>
+                <p class="time-worked">New York Institute of Technology, Old Westbury, NY</p>
+                <p class="time-worked">September 2024 - December 2024</p>
+                <ul>
+                    <li>Gain a comprehensive understanding of core topics by developing lecture materials and effectively explaining complex concepts in a clear, concise manner tailored to students with diverse levels of understanding.</li>
+                    <li>Learn to use tools and platforms such as VirtualBox VM and PostgreSQL.</li>
+                    <li>Enhance the ability to effectively balance TA responsibilities with personal academic workload.</li>
+                </ul>
+            </div>
+            
+            <!-- Team Member -->
+            <div class="card">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <h3>Crew Member</h3>
+                <p class="time-worked">Dunkin Donuts, Williston Park, NY</p>
+                <p class="time-worked">May 2021 - Present</p>
+                <ul>
+                    <li>Delivered exceptional customer service in a high-volume, fast-paced environment, consistently meeting quality and efficiency standards.</li>
+                    <li>Handled customer inquiries, resolved conflicts, and addressed technical issues promptly to ensure a positive customer experience.</li>
+                    <li>Assisted in shift scheduling, demonstrating reliability and organizational skills to maintain smooth operations and optimal staffing.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!--Academic Achievements Section-->
+<section id="academic-achievements">
+    <div class="container">
+        <h2>Academic Achievements</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>President's Honors List</h3>
+                <p>Fall 2020, Spring 2021, Spring 2023, Spring 2024</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Dean’s List</h3>
+                <p>Spring 2022, Fall 2022</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Phi Eta Sigma</h3>
+                <p>Member</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Skills Section-->
+<section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Java</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>MySQL, PostgreSQL, MySQLWorkbench, Firebase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>HTML, CSS, JSP (Java Server Pages)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Tools/IDEs</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>IntelliJ IDEA, Eclipse, VSCode, Android Studio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer>
+    <p>&copy; 2025 Ria Varghese. All Rights Reserved.</p>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to Top">&#8679;</button>
+
+<script>
+    // Get the button
+    const backToTopButton = document.getElementById("back-to-top");
+  
+    // Show the button when scrolling down
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+  
+    // Scroll back to the top when the button is clicked
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+
+</body>
+</html>
