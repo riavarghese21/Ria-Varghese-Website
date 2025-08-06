@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ria Varghese | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="container nav-container">
+    <a href="." class="logo-text">Ria Varghese</a>
+    <nav>
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="header" class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="subtitle">Computer Science Graduate</span>
+      <h1>Hi, I'm <span class="highlight">Ria Varghese!</span></h1>
+      <p>Fueled by passion and a love for tech, I’m always building, learning, and exploring new ideas.</p>
+      <a href="#about" class="btn btn-primary">Learn More About Me</a>
+    </div>
+    <div class="hero-image">
+      <img src="image/RiaHeader.jpg" alt="Ria Varghese">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About <span class="highlight">Me</span></h2>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="image/RiaAbout.jpg" alt="About Ria">
+      </div>
+      <div class="about-info">
+        <p style="text-align: center;">
+          I'm a recent Computer Science graduate from NYIT and am now eager to apply my skills in real-world tech environments. I’m especially passionate about building user-friendly experiences and continuously expanding my knowledge of modern tools and frameworks.
+        </p>
+    <div class="tabs">
+        <button class="tab-link active" data-tab="education">Education</button>
+        <button class="tab-link" data-tab="work-experience">Work Experience</button>
+        <button class="tab-link" data-tab="skills">Skills</button>
+    </div>
+
+    <div class="tab-content active" id="education">
+        <h4>Education</h4>
+        <p><strong>Master of Science in Computer Science</strong><br>
+        New York Institute of Technology - Graduated: May 2025 •
+        GPA: 3.75
+
+        <p><strong>Bachelor of Science in Computer Science</strong><br>
+        New York Institute of Technology - Graduated: May 2024 •
+        GPA: 3.62
+    </div>
+
+    <div class="tab-content" id="work-experience">
+        <h4>Work Experience</h4>
+        <p><strong>Teaching Assistant</strong><br>
+        New York Institute of Technology • 2024 - 2025<br>
+        Assisted over 50 students in programming and database courses, enhancing understanding of computing concepts and facilitating course logistics.</p>
+
+        <p><strong>Crew Member</strong><br>
+        Dunkin Donuts • 2021 - Present<br>
+        Managed POS software issues and collaborated with management on scheduling and inventory systems.</p>
+    </div>
+
+    <div class="tab-content" id="skills">
+        <h4>Skills</h4>
+        <p><strong>Programming Languages</strong><br>
+          Java, SQL, HTML, CSS, Python</p>
+        <p><strong>Database Management</strong><br>
+          PostgreSQL, MySQL, Firebase</p>
+        <p><strong>Tools</strong><br>
+          IntelliJ IDEA, MySQL Workbench, VSCode, Android Studio, Firebase, Eclipse, GitHub</p>
+        <p><strong>Certifications</strong><br>
+          CompTIA Security+, Salesforce Trailhead (AI Trail)</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio-section-bg">
+  <div class="container">
+    <h2 class="section-title">My <span class="highlight">Work</span></h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/StudentAttendanceTracker.jpg" alt="Attendance Tracker">
+        <div class="portfolio-overlay">
+          <h3>Attendance Tracker</h3>
+          <p>App for tracking student attendance efficiently.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/OnlineStore.jpg" alt="H.E.R">
+        <div class="portfolio-overlay">
+          <h3>H.E.R</h3>
+          <p>Online store project built with modern web tech.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/VRExpo.png" alt="VRExpo">
+        <div class="portfolio-overlay">
+          <h3>VRExpo</h3>
+          <p>Virtual reality expo platform for immersive experiences.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-secondary" >See More</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+    <div class="contact-content">
+      <form class="contact-form">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="What Would You Like to Say?"></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div class="contact-info">
+        <p><i class="fa-solid fa-envelope"></i> riavarghese021@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 516-884-7113</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/ria-varghese-b89b29221/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <a href="image/RiaVargheseResume.pdf" download class="btn btn-secondary">Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO TOP -->
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<script>
+  function opentab(evt, tabName) {
+    const tablinks = document.getElementsByClassName("tab-link");
+    const tabcontents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+      tabcontents[i].classList.remove("active");
+    }
+    evt.currentTarget.classList.add("active");
+    document.getElementById(tabName).classList.add("active");
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (this.hash) {
+        e.preventDefault();
+        document.querySelector(this.hash).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Back to top button
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+
+// Tab switching
+document.querySelectorAll(".tab-link").forEach(button => {
+  button.addEventListener("click", function () {
+    opentab(event, this.dataset.tab);
+  });
+});
+</script>
+
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '688f89d510eb0c0b94656837' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
