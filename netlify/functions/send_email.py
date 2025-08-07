@@ -4,17 +4,17 @@ import requests
 
 def handler(event, context):
     try:
-        # Parse form data
+        # Parse form data from request body
         data = json.loads(event['body'])
         name = data.get('name')
         email = data.get('email')
         message = data.get('message')
 
-        # Prepare email content
+        # Email details
         subject = f"New Contact Form Submission from {name}"
         content = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
 
-        # Send email via SendGrid API
+        # Send via SendGrid API
         sendgrid_api_key = os.environ.get("SENDGRID_API_KEY")
         response = requests.post(
             "https://api.sendgrid.com/v3/mail/send",
