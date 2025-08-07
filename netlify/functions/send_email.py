@@ -1,51 +1,26 @@
-import os
+# netlify/functions/send_email.py
+
 import json
-import requests
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 def handler(event, context):
+    data = json.loads(event["body"])
+    message = Mail(
+        from_email='riavarghese021@gmail.com',
+        to_emails='riavarghese021@gmail.com',
+        subject='New Contact Form Message',
+        html_content=f"<strong>Name:</strong> {data['name']}<br><strong>Email:</strong> {data['email']}<br><strong>Message:</strong> {data['message']}"
+    )
+
     try:
-        # Parse form data from request body
-        data = json.loads(event['body'])
-        name = data.get('name')
-        email = data.get('email')
-        message = data.get('message')
-
-        # Email details
-        subject = f"New Contact Form Submission from {name}"
-        content = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
-
-        # Send via SendGrid API
-        sendgrid_api_key = os.environ.get("SENDGRID_API_KEY")
-        response = requests.post(
-            "https://api.sendgrid.com/v3/mail/send",
-            headers={
-                "Authorization": f"Bearer {sendgrid_api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "personalizations": [{
-                    "to": [{"email": "riavarghese021@gmail.com"}]
-                }],
-                "from": {"email": "no-reply@yourdomain.com"},
-                "subject": subject,
-                "content": [{
-                    "type": "text/plain",
-                    "value": content
-                }]
-            }
-        )
-
-        if response.status_code == 202:
-            return {
-                "statusCode": 200,
-                "body": json.dumps({"status": "success"})
-            }
-        else:
-            return {
-                "statusCode": 500,
-                "body": json.dumps({"status": "error", "message": response.text})
-            }
-
+        sg = SendGridAPIClient(os.environ['SENDGRID_API_KEY'])
+        response = sg.send(message)
+        return {
+            "statusCode": 200,
+            "body": json.dumps({"status": "success"})
+        }
     except Exception as e:
         return {
             "statusCode": 500,
