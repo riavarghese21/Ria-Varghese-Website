@@ -131,38 +131,12 @@
   <div class="container">
     <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
     <div class="contact-content">
-      <form id="contactForm">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="What Would You Like to Say?" required></textarea>
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  const formData = {
-    name: this.name.value,
-    email: this.email.value,
-    message: this.message.value
-  };
-
-  const response = await fetch('/.netlify/functions/send_email', {
-    method: 'POST',
-    body: JSON.stringify(formData)
-  });
-
-  const result = await response.json();
-  if (result.status === 'success') {
-    alert('Message sent successfully!');
-    this.reset();
-  } else {
-    alert('Failed to send message.');
-  }
-});
-</script>
-
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="What Would You Like to Say?" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
       <div class="contact-info">
         <p><i class="fa-solid fa-envelope"></i> riavarghese021@gmail.com</p>
         <p><i class="fa-solid fa-phone"></i> 516-884-7113</p>
@@ -233,6 +207,31 @@ document.querySelectorAll(".tab-link").forEach(button => {
       }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
+</script>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value
+  };
+
+  const response = await fetch('/.netlify/functions/send_email', {
+    method: 'POST',
+    body: JSON.stringify(formData)
+  });
+
+  const result = await response.json();
+  if (result.status === 'success') {
+    alert('Message sent successfully!');
+    this.reset();
+  } else {
+    alert('Failed to send message.');
+  }
+});
 </script>
 
 </body>
